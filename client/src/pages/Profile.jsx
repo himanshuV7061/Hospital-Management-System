@@ -23,7 +23,7 @@ function Profile() {
   const fetchProfile = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/auth/profile",
+        "https://hospital-management-system-4kjr.onrender.com/api/auth/profile",
         getConfig()
       );
 
@@ -45,7 +45,7 @@ function Profile() {
 
     try {
       const { data } = await axios.put(
-        "http://localhost:5000/api/auth/profile",
+        "https://hospital-management-system-4kjr.onrender.com/api/auth/profile",
         profile,
         getConfig()
       );

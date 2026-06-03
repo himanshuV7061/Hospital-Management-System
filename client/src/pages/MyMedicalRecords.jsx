@@ -22,7 +22,7 @@ function MyMedicalRecords() {
   const fetchMyRecords = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/medical-records/my",
+        "https://hospital-management-system-4kjr.onrender.com/api/medical-records/my",
         getConfig()
       );
 

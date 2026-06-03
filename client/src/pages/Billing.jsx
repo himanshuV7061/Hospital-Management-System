@@ -32,7 +32,7 @@ function Billing() {
   const fetchBills = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/bills",
+        "https://hospital-management-system-4kjr.onrender.com/api/bills",
         getConfig()
       );
 
@@ -45,7 +45,7 @@ function Billing() {
   const fetchAppointments = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/appointments",
+        "https://hospital-management-system-4kjr.onrender.com/api/appointments",
         getConfig()
       );
 
@@ -88,7 +88,7 @@ function Billing() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/bills",
+        "https://hospital-management-system-4kjr.onrender.com/api/bills",
         formData,
         getConfig()
       );
@@ -113,7 +113,7 @@ function Billing() {
   const markPaid = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/bills/${id}/pay`,
+        `https://hospital-management-system-4kjr.onrender.com/api/bills/${id}/pay`,
         {},
         getConfig()
       );

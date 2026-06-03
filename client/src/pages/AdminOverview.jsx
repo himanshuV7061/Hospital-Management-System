@@ -39,12 +39,12 @@ function AdminOverview() {
         admissionsRes,
         billsRes,
       ] = await Promise.all([
-        axios.get("http://localhost:5000/api/appointments", getConfig()),
-        axios.get("http://localhost:5000/api/doctors", getConfig()),
-        axios.get("http://localhost:5000/api/beds", getConfig()),
-        axios.get("http://localhost:5000/api/emergencies", getConfig()),
-        axios.get("http://localhost:5000/api/admissions", getConfig()),
-        axios.get("http://localhost:5000/api/bills", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/appointments", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/doctors", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/beds", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/emergencies", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/admissions", getConfig()),
+        axios.get("https://hospital-management-system-4kjr.onrender.com/api/bills", getConfig()),
       ]);
 
       setStats({

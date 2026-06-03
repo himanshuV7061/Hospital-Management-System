@@ -22,7 +22,7 @@ function HealthCards() {
   const fetchCards = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/health-cards",
+        "https://hospital-management-system-4kjr.onrender.com/api/health-cards",
         getConfig()
       );
 
@@ -37,7 +37,7 @@ function HealthCards() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/health-cards/${id}/status`,
+        `https://hospital-management-system-4kjr.onrender.com/api/health-cards/${id}/status`,
         { status, remarks },
         getConfig()
       );
@@ -143,7 +143,7 @@ function HealthCards() {
               <div className="flex gap-3 flex-wrap mt-5">
                 {card.cardFile && (
                   <a
-                    href={`http://localhost:5000/${card.cardFile}`}
+                    href={`https://hospital-management-system-4kjr.onrender.com/${card.cardFile}`}
                     target="_blank"
                     rel="noreferrer"
                     className="bg-cyan-400 text-slate-950 px-5 py-3 rounded-xl font-black hover:bg-cyan-300"

@@ -25,7 +25,7 @@ function ForgotPassword() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://hospital-management-system-4kjr.onrender.com/api/auth/forgot-password",
         {
           email: formData.email,
         }
@@ -44,7 +44,7 @@ function ForgotPassword() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/reset-password",
+        "https://hospital-management-system-4kjr.onrender.com/api/auth/reset-password",
         {
           email: formData.email,
           otp: formData.otp,

@@ -30,7 +30,7 @@ function Doctors() {
   const fetchDoctors = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/doctors",
+        "https://hospital-management-system-4kjr.onrender.com/api/doctors",
         getConfig()
       );
 
@@ -52,7 +52,7 @@ function Doctors() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/doctors",
+        "https://hospital-management-system-4kjr.onrender.com/api/doctors",
         formData,
         getConfig()
       );

@@ -22,7 +22,7 @@ function MyBills() {
   const fetchBills = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/bills/my",
+        "https://hospital-management-system-4kjr.onrender.com/api/bills/my",
         getConfig()
       );
 

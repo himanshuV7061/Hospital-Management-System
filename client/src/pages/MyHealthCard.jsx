@@ -29,7 +29,7 @@ function MyHealthCard() {
   const fetchMyCard = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/health-cards/my",
+        "https://hospital-management-system-4kjr.onrender.com/api/health-cards/my",
         getConfig()
       );
       setCard(data);
@@ -62,7 +62,7 @@ function MyHealthCard() {
         data.append("cardFile", formData.cardFile);
       }
 
-      await axios.post("http://localhost:5000/api/health-cards", data, {
+      await axios.post("https://hospital-management-system-4kjr.onrender.com/api/health-cards", data, {
         headers: {
           Authorization: `Bearer ${userInfo.token}`,
           "Content-Type": "multipart/form-data",
@@ -190,7 +190,7 @@ function MyHealthCard() {
 
                 {card.cardFile && (
                   <a
-                    href={`http://localhost:5000/${card.cardFile}`}
+                    href={`https://hospital-management-system-4kjr.onrender.com/${card.cardFile}`}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block text-cyan-300 underline"

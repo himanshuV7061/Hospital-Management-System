@@ -22,7 +22,7 @@ function Reports() {
   const fetchReports = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/reports",
+        "https://hospital-management-system-4kjr.onrender.com/api/reports",
         getConfig()
       );
 
@@ -75,7 +75,7 @@ function Reports() {
                 </div>
 
                 <a
-                  href={`http://localhost:5000/${report.file}`}
+                  href={`https://hospital-management-system-4kjr.onrender.com/${report.file}`}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-cyan-400 text-slate-950 px-5 py-3 rounded-xl font-black h-fit hover:bg-cyan-300"

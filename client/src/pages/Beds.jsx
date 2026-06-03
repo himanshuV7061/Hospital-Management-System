@@ -28,7 +28,7 @@ function Beds() {
   const fetchBeds = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/beds",
+        "https://hospital-management-system-4kjr.onrender.com/api/beds",
         getConfig()
       );
 
@@ -50,7 +50,7 @@ function Beds() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/beds",
+        "https://hospital-management-system-4kjr.onrender.com/api/beds",
         formData,
         getConfig()
       );
@@ -73,7 +73,7 @@ function Beds() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/beds/${id}/status`,
+        `https://hospital-management-system-4kjr.onrender.com/api/beds/${id}/status`,
         { status },
         getConfig()
       );

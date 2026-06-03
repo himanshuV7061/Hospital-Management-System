@@ -49,7 +49,7 @@ function Login() {
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/google-login",
+        "https://hospital-management-system-4kjr.onrender.com/api/auth/google-login",
         {
           credential: credentialResponse.credential,
         }

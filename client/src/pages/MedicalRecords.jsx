@@ -32,7 +32,7 @@ function MedicalRecords() {
   const fetchRecords = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/medical-records",
+        "https://hospital-management-system-4kjr.onrender.com/api/medical-records",
         getConfig()
       );
 
@@ -45,7 +45,7 @@ function MedicalRecords() {
   const fetchAppointments = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/appointments",
+        "https://hospital-management-system-4kjr.onrender.com/api/appointments",
         getConfig()
       );
 
@@ -81,7 +81,7 @@ function MedicalRecords() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/medical-records",
+        "https://hospital-management-system-4kjr.onrender.com/api/medical-records",
         formData,
         getConfig()
       );

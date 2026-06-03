@@ -15,7 +15,7 @@ function AdminDashboard() {
     fetchAppointments();
     fetchDoctors();
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://hospital-management-system-4kjr.onrender.com");
 
     socket.on("newAppointment", () => {
       alert("New appointment booked!");
@@ -49,7 +49,7 @@ function AdminDashboard() {
   const fetchDoctors = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/doctors",
+        "https://hospital-management-system-4kjr.onrender.com/api/doctors",
         getTokenConfig()
       );
 
@@ -62,7 +62,7 @@ function AdminDashboard() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/appointments/${id}`,
+        `https://hospital-management-system-4kjr.onrender.com/api/appointments/${id}`,
         { status },
         getTokenConfig()
       );
@@ -85,7 +85,7 @@ function AdminDashboard() {
       }
 
       await axios.put(
-        `http://localhost:5000/api/appointments/${appointmentId}/assign-doctor`,
+        `https://hospital-management-system-4kjr.onrender.com/api/appointments/${appointmentId}/assign-doctor`,
         { doctorId },
         getTokenConfig()
       );

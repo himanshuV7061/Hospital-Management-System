@@ -32,7 +32,7 @@ function Admissions() {
   const fetchAdmissions = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/admissions",
+        "https://hospital-management-system-4kjr.onrender.com/api/admissions",
         getConfig()
       );
 
@@ -45,7 +45,7 @@ function Admissions() {
   const fetchAppointments = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/appointments",
+        "https://hospital-management-system-4kjr.onrender.com/api/appointments",
         getConfig()
       );
 
@@ -79,7 +79,7 @@ function Admissions() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/admissions",
+        "https://hospital-management-system-4kjr.onrender.com/api/admissions",
         formData,
         getConfig()
       );
@@ -104,7 +104,7 @@ function Admissions() {
   const dischargePatient = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/admissions/${id}/discharge`,
+        `https://hospital-management-system-4kjr.onrender.com/api/admissions/${id}/discharge`,
         {},
         getConfig()
       );

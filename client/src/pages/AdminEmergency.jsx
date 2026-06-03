@@ -9,7 +9,7 @@ function AdminEmergency() {
   useEffect(() => {
     fetchEmergencies();
 
-    const socket = io("http://localhost:5000");
+    const socket = io("https://hospital-management-system-4kjr.onrender.com");
 
     socket.on("newEmergency", () => {
       alert("🚑 New emergency request received!");
@@ -34,7 +34,7 @@ function AdminEmergency() {
   const fetchEmergencies = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/emergencies",
+        "https://hospital-management-system-4kjr.onrender.com/api/emergencies",
         getConfig()
       );
 
@@ -47,7 +47,7 @@ function AdminEmergency() {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/emergencies/${id}`,
+        `https://hospital-management-system-4kjr.onrender.com/api/emergencies/${id}`,
         { status },
         getConfig()
       );

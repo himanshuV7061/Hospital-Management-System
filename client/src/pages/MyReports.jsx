@@ -27,7 +27,7 @@ function MyReports() {
   const fetchReports = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:5000/api/reports/my",
+        "https://hospital-management-system-4kjr.onrender.com/api/reports/my",
         getConfig()
       );
 
@@ -61,7 +61,7 @@ function MyReports() {
       data.append("title", formData.title);
       data.append("file", formData.file);
 
-      await axios.post("http://localhost:5000/api/reports", data, {
+      await axios.post("https://hospital-management-system-4kjr.onrender.com/api/reports", data, {
         headers: {
           Authorization: `Bearer ${userInfo.token}`,
           "Content-Type": "multipart/form-data",
@@ -148,7 +148,7 @@ function MyReports() {
                   </p>
 
                   <a
-                    href={`http://localhost:5000/${report.file}`}
+                    href={`https://hospital-management-system-4kjr.onrender.com/${report.file}`}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block mt-3 text-cyan-300 underline"

@@ -22,7 +22,7 @@ function BookAppointment() {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/doctors",
+        "https://hospital-management-system-4kjr.onrender.com/api/doctors",
         {
           headers: {
             Authorization: `Bearer ${userInfo.token}`,

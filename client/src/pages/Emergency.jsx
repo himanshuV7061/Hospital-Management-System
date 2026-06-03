@@ -22,7 +22,7 @@ function Emergency() {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
       await axios.post(
-        "http://localhost:5000/api/emergencies",
+        "https://hospital-management-system-4kjr.onrender.com/api/emergencies",
         formData,
         {
           headers: {

@@ -24,7 +24,7 @@ function AddDoctor() {
     try {
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-      await axios.post("http://localhost:5000/api/doctors", formData, {
+      await axios.post("https://hospital-management-system-4kjr.onrender.com/api/doctors", formData, {
         headers: {
           Authorization: `Bearer ${userInfo.token}`,
         },
